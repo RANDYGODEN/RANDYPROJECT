@@ -1,9 +1,4 @@
-# ===============================
-# Example Program Using Array (List)
-# Python Beginner Friendly Code
-# ===============================
 
-# Create an array (list) of numbers
 numbers = [10, 20, 30, 40, 50]
 
 # Print original array
