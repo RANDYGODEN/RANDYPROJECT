@@ -1,55 +1,44 @@
+# ===========================================
+# Binary Search Example Using Array (List)
+# Explanation is inside the code using comments
+# ===========================================
 
-numbers = [10, 20, 30, 40, 50]
+# Sorted array (Binary search requires sorted data)
+numbers = [10, 20, 30, 40, 50, 60, 70]
 
-# Print original array
-print("Original Array:")
-print(numbers)
+# Value we want to search
+target = 40
 
+# Left and right pointer
+left = 0
+right = len(numbers) - 1
 
-numbers.append(60)
-numbers.append(70)
+# Flag variable (check if value is found)
+found = False
 
-print("\nArray after adding elements:")
-print(numbers)
+# Loop while search space is valid
+while left <= right:
 
-# ===============================
-# Access array elements using index
-# Index starts at 0 in Python
-# ===============================
-print("\nAccessing array elements:")
-print("First element:", numbers[0])
-print("Second element:", numbers[1])
-print("Third element:", numbers[2])
+    # Find middle index of array
+    # // means integer division (no decimal)
+    mid = (left + right) // 2
 
-# ===============================
-# Modify array element
-# Change value at index 1
-# ===============================
-numbers[1] = 25
+    # Check if middle value is the target
+    if numbers[mid] == target:
+        print("Value found at index:", mid)
+        found = True
+        break  # Stop loop if value is found
 
-print("\nArray after modification:")
-print(numbers)
+    # If target is bigger, search right side
+    elif numbers[mid] < target:
+        # Move left pointer to mid + 1
+        left = mid + 1
 
-# ===============================
-# Remove element from array
-# remove() deletes specific value
-# ===============================
-numbers.remove(40)
+    # If target is smaller, search left side
+    else:
+        # Move right pointer to mid - 1
+        right = mid - 1
 
-print("\nArray after removing 40:")
-print(numbers)
-
-# ===============================
-# Loop through array
-# ===============================
-print("\nLooping through array elements:")
-
-for num in numbers:
-    print("Value:", num)
-
-# ===============================
-# Array length
-# len() is used to check number of elements
-# ===============================
-print("\nTotal number of elements in array:")
-print(len(numbers))
+# If value is not found
+if not found:
+    print("Value not found in array")
