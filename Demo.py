@@ -5,10 +5,7 @@ numbers = [10, 20, 30, 40, 50]
 print("Original Array:")
 print(numbers)
 
-# ===============================
-# Add new element inside array
-# append() is used to add element at the end of list
-# ===============================
+
 numbers.append(60)
 numbers.append(70)
 
