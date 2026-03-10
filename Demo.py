@@ -1,44 +1,51 @@
-# ===========================================
-# Binary Search Example Using Array (List)
-# Explanation is inside the code using comments
-# ===========================================
+print("====================================")
+print("   STUDENT RECORD SYSTEM ( 1B )"     )
+print("====================================\n")
 
-# Sorted array (Binary search requires sorted data)
-numbers = [10, 20, 30, 40, 50, 60, 70]
+Student_arrID = [
+    [25-11652],[25-11712],[25-11677],[25-11679],[25-11661],[25-11650],[25-11657],[25-11636],[25-12275],[25-11710],[25-11707],[25-12327],[25-11671],[25-11693],
+    [25-11627],[25-11888],[25-12192],[25-11670],[25-12493],[25-11715],[25-11648],[25-11816],[25-11703],[25-11668],[25-12334],[25-12424],[25-11758],[25-12250],
 
-# Value we want to search
-target = 40
+]
 
-# Left and right pointer
-left = 0
-right = len(numbers) - 1
+# 27 STUDENTS RECORD
+Student_arrName = [
+    ["Abayog, Joanaa Mae P."],["Abique, Maurine R."],["Amarra, Eugene A."],["Andojar, Rizza Mae B."],["Angeles, Brian Steven V."],["Angeles, Princess Jane E."],
+    ["Avila, Jhon Mark G."],["Bangcaray, Reniel C."],["Baxal, Rosmarie m."],["Busa, Tzeistel kienna C."],["Buzon, Rica L."],["Cabato, Jonathan R."],
+    ["Camposano, James Calro P."],["Dacles, Zyrel C."],["Dela, Serna Lyka N."],["Delmonte, Rina Grace D."],["Desalin, Lhe Ann C."],["Dilao, Jully Mae Q."],
+    ["Dingrat, Maria Teresa O."],["Doligon, Jhon Donard M."],["Doneza, Jillian L."],["Doron, curly Ann A."],["Geroy, Ariane Kate"],["Geroy, kent James C."],
+    ["Goden, Randy Y."],["Gornes, Christian P."],["Gudes, Karen Joy S."],["Hicao, Allan Kris B."]
+]
 
-# Flag variable (check if value is found)
-found = False
+Program_End = True
 
-# Loop while search space is valid
-while left <= right:
+while Program_End :
+    print("\n1. Add Student")
+    print("2. Find Student Info. Using ( ID NUMBER )")
+    print("3. Display All Students Record")
+    print("4. Exit\n")
 
-    # Find middle index of array
-    # // means integer division (no decimal)
-    mid = (left + right) // 2
+    choice = int(input("Enter Your Choice: "))
 
-    # Check if middle value is the target
-    if numbers[mid] == target:
-        print("Value found at index:", mid)
-        found = True
-        break  # Stop loop if value is found
+    match choice:
 
-    # If target is bigger, search right side
-    elif numbers[mid] < target:
-        # Move left pointer to mid + 1
-        left = mid + 1
+        case 1 :
+            print("Your Choice Is Adding Student!")
+            FullName = input("Enter Your Fullname: ")
+            Id = input("Enter ID Number: ")
+            Student_arrName.append([FullName, Id])
+            print("Student Added Successfully!")
 
-    # If target is smaller, search left side
-    else:
-        # Move right pointer to mid - 1
-        right = mid - 1
+        case 2 :
+            print("Your Choice Is Find Student Record By Entering ( ID NUMBER )!")
 
-# If value is not found
-if not found:
-    print("Value not found in array")
+        case 3 :
+            print("Your Is Display All Student Record In ( BSIT 1B )")
+
+        case 4 :
+            print("Program Finished!")
+            Program_End = False
+
+        case _:
+            print("INVALID INPUT PLEASE SELECT ( 1-4 )!")
+            print("PLEASE TRY AGAIN NA KUPAL KA!")
