@@ -33,8 +33,8 @@ Program_End = True    # BOOLEAN NGA MAYDA VALUE NA TRUE PARA HAN PAG-GAMIT HAN W
 
 while Program_End :
 
-    print("\n====================================")
-    print("   STUDENT RECORD SYSTEM ( 1B )")
+    print("\n\n====================================")
+    print("   STUDENT CLASS RECORD SYSTEM ( 1B )")
     print("======================================\n")
 
     print("\n1. Add Student")
@@ -47,8 +47,8 @@ while Program_End :
     match choice:
 
         case 1 :
-            print("Your Choice Is Adding Student!")
-            FullName = input("Enter Your Fullname: ")
+            print("Your Choice Is Adding Student!\n")
+            FullName = input("Enter Your FullName(LName. FName. MName.): ")
             Student_arrName.append([FullName])
 
             Id = input("Enter ID Number: ")
@@ -57,21 +57,23 @@ while Program_End :
             Sex = input("Enter Gender ( M/F ): ")
             Student_arrGender.append([Sex])
 
-            print("Congrats Student Record Added successfully!")
+            print("\nCONGRATS STUDENT RECORD SUCCESSFULLY!")
 
         case 2 :
-            print("Your Choice Is Find Student Record By Entering ( ID NUMBER )!")
+            print("Your Choice Is Find Student Record By Entering ( ID NUMBER )!\n")
             Number = input("Please Enter your ID NUMBER EX.( 25-00000 ): ")
-            Boll = True
+            NotFound = False
+            Found = False
 
-            for i in range(len(Student_arrID)):             # ROW
-                for j in range(len(Student_arrID[i])):      # COLUMN
-                    if Boll:
-                        if Number == Student_arrID[i][j]:
-                            print("STUDENT FOUNDED!")
-                            print("STUDENT ID: ", Student_arrID[i][j], "   ", Student_arrGender[i][j], "     ",Student_arrName[i][j])
-                    else:
-                        print("NO STUDENTS RECORD BASED ON YOUR ID!")
+            for i in range(len(Student_arrID)):  # ROW
+                for j in range(len(Student_arrID[i])):  # COLUMN
+                    if Number == Student_arrID[i][j]:
+                        print("STUDENT FOUND!\n")
+                        print("STUDENT ID: ", Student_arrID[i][j], "\t", Student_arrGender[i][j], "\t",Student_arrName[i][j])
+                        NotFound = True
+
+            if NotFound == Found:
+                print("NO STUDENT FOUND BASED ON YOUR ID NUMBER!")
 
         case 3 :
             print("Your Choice Is Display All Student Record In ( BSIT 1B )")
@@ -79,7 +81,7 @@ while Program_End :
 
             for row in range(len(Student_arrName)):
                 for col in range(len(Student_arrName[row])):
-                    print("STUDENT ID: ", Student_arrID[row][col], "   ",Student_arrGender[row][col], "     ", Student_arrName[row][col])
+                    print("STUDENT ID:", Student_arrID[row][col], "\t",Student_arrGender[row][col], "\t", Student_arrName[row][col])
 
         case 4 :
             print("Program Finished!")
@@ -90,6 +92,6 @@ while Program_End :
             print("PLEASE TRY AGAIN NA KUPAL KA!")
 
 print("=================================")
-print("   TANKS FOR YOU'RE PATIENT      ")
+print("   TANKS FOR YOU'RE PATIENTS     ")
 print("         GOOD BYE!               ")
 print("=================================")
