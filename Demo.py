@@ -98,7 +98,12 @@ while Program_End :   # KAPAG TRUE MA CONTINUE AN LOOP AND PAG MAG FALSE MA STOP
             print("INVALID INPUT PLEASE SELECT ( 1-4 )!")
             print("PLEASE TRY AGAIN!")
 
-print("=================================") # KAPAG MATAPOS NA AN LOOP MA PRINT INI TANAN
+print("=================================") # KAPAG MATAPOS NA AN LOOP MA OUTPUT INI TANAN
 print("   TANKS FOR YOU'RE PATIENTS     ")
 print("         GOOD BYE!               ")
 print("=================================")
+
+# F2A CARS BUSINESS MANAGEMENT SYSTEM
+# CAR BRAND - ( 1.TOYOTA , 2.FORD , 3.MITSUBISHI , 4.NISSAN , 5.HONDA ) 5 CHOICES (SWITCH CASE) 
+# CAR NAME ITEM - (HILUX - (X5)) , (RAPTOR - (X5)) , (MONTERO (X5)) , (GTR 23 - (X5))  , (CIVIC RS - (X5)) 2 CHOICES (DISPLAY ALL / CHOSE ONE TO DISPLAY)(ELSE IF / WHILE LOOP)
+# CAR DETAILS AND PRICE - (2026-2026 / 1.5M) , (2024-2025 / 1.3M) , (2023-2024 / 2.3M) , (2025-2026 / 5.6M) , (2024-2025 / 1.2M)
